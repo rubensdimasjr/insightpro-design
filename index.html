@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Rubens">
-	<meta name="description" content="Bootstrap based News, Webestica and Blog Theme">
+	<meta name="description" content="Bootstrap, Webestica and Blog Theme, Rubens Júnior">
 
 	<!-- Dark mode -->
 	<script>
@@ -112,37 +112,28 @@ Header START -->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav navbar-nav-scroll mx-auto">
 
-					<!-- Nav item 1 Demos -->
-					<li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door me-1"></i>Dashboard</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door me-1"></i>Início</a></li>
+					<li class="nav-item"><a class="nav-link" href="provas.html"><i class="bi bi-pencil me-1"></i>Provas</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people me-1"></i>Alunos</a></li>
 
-					<!-- Nav item 2 Post -->
 <!-- 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="postMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-pencil me-1"></i>Post</a>
+						<a class="nav-link dropdown-toggle" href="#" id="postMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-pencil me-1"></i>Provas</a>
 						<ul class="dropdown-menu" aria-labelledby="postMenu">
-							<li> <a class="dropdown-item" href="#">Post List</a> </li>
-							<li> <a class="dropdown-item" href="#">Post Categories</a> </li>
-							<li> <a class="dropdown-item" href="#">Create a Post</a> </li>
-							<li> <a class="dropdown-item" href="#">Edit Post</a> </li>
+							<li> <a class="dropdown-item" href="#">Lista de provas</a> </li>
+							<li> <a class="dropdown-item" href="#">Criar prova</a> </li>
+							<li> <a class="dropdown-item" href="#">Editar prova</a> </li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-folder me-1"></i>Alunos</a>
+						<ul class="dropdown-menu" aria-labelledby="pagesMenu">
+							<li> <a class="dropdown-item" href="#">Lista de alunos</a></li>
+							<li> <a class="dropdown-item" href="#">Criar aluno</a></li>
+							<li> <a class="dropdown-item" href="#">Editar aluno</a></li>
 						</ul>
 					</li> -->
 
-					<!-- Nav item 3 Pages -->
-<!-- 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-folder me-1"></i>Pages</a>
-						<ul class="dropdown-menu" aria-labelledby="pagesMenu">
-							<li> <a class="dropdown-item" href="#">Author List</a></li>
-							<li> <a class="dropdown-item" href="#">Author Single</a></li>
-							<li> <a class="dropdown-item" href="#">Edit Profile</a></li>
-							<li> <a class="dropdown-item" href="#">Reviews</a></li>
-							<li> <a class="dropdown-item" href="#">Settings</a></li>
-							<li class="dropdown-divider"></li>
-							<li> <a class="dropdown-item" href="#" target="_blank"> <i class="text-warning fa-fw bi bi-life-preserver me-2"></i>Support</a></li>
-							<li> <a class="dropdown-item" href="#" target="_blank"> <i class="text-danger fa-fw bi bi-card-text me-2"></i>Documentation</a></li>
-							<li class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#" target="_blank"> <i class="text-info fa-fw bi bi-toggle-off me-2"></i>RTL demo</a></li>
-							<li><a class="dropdown-item" href="#" target="_blank"> <i class="text-success fa-fw bi bi-cloud-download-fill me-2"></i>Buy blogzine!</a> </li>
-						</ul>
-					</li> -->
 				</ul>
 				
 				<!-- Search dropdown START -->
@@ -322,625 +313,34 @@ Header END -->
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 
-<!-- =======================
-Main contain START -->
-<section class="py-4">
-	<div class="container">
-		<div class="row g-4">
-
-			<div class="col-12">
-				<!-- Counter START -->
-				<div class="row g-4">
-					
-					<!-- Counter item -->
-					<div class="col-sm-6 col-lg-3">
-						<div class="card card-body border p-3">
-							<div class="d-flex align-items-center">
-								<!-- Icon -->
-								<div class="icon-xl fs-1 bg-success bg-opacity-10 rounded-3 text-success">
-									<i class="bi bi-people-fill"></i>
-								</div>
-								<!-- Content -->
-								<div class="ms-3">
-									<h3>50</h3>
-									<h6 class="mb-0">Alunos</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Counter item -->
-					<div class="col-sm-6 col-lg-3">
-						<div class="card card-body border p-3">
-							<div class="d-flex align-items-center">
-								<!-- Icon -->
-								<div class="icon-xl fs-1 bg-primary bg-opacity-10 rounded-3 text-primary">
-									<i class="bi bi-file-earmark-text-fill"></i>
-								</div>
-								<!-- Content -->
-								<div class="ms-3">
-									<h3>18</h3>
-									<h6 class="mb-0">Provas Corrigidas</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Counter item -->
-					<div class="col-sm-6 col-lg-3">
-						<div class="card card-body border p-3">
-							<div class="d-flex align-items-center">
-								<!-- Icon -->
-								<div class="icon-xl fs-1 bg-danger bg-opacity-10 rounded-3 text-danger">
-									<i class="bi bi-suit-heart-fill"></i>
-								</div>
-								<!-- Content -->
-								<div class="ms-3">
-									<h3>35</h3>
-									<h6 class="mb-0">Feedbacks</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Counter item -->
-					<div class="col-sm-6 col-lg-3">
-						<div class="card card-body border p-3">
-							<div class="d-flex align-items-center">
-								<!-- Icon -->
-								<div class="icon-xl fs-1 bg-info bg-opacity-10 rounded-3 text-info">
-									<i class="bi bi-bar-chart-line-fill"></i>
-								</div>
-								<!-- Content -->
-								<div class="ms-3">
-									<h3>84%</h3>
-									<h6 class="mb-0">Média das Provas</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!-- Counter END -->
-			</div>
-
-			<div class="col-xl-8">
-				<!-- Chart START -->
-				<div class="card border h-100">
-
-					<!-- Card header -->
-					<div class="card-header p-3 border-bottom">
-						<h5 class="card-header-title mb-0">Taxa de Acertos</h5>
-					</div>
-					<!-- Card body -->
-					<div class="card-body">
-						<!-- Apex chart -->
-						<div id="apexChartTrafficStats" class="mt-2"></div>
+	<!-- Main hero START -->
+	<section>
+		<div class="container">
+		<div class="row g-4 align-items-center justify-content-between pb-lg-5">
+		<div class="col-lg-6 mt-0 position-relative">
+			<!-- Hero image -->
+			<img class="rounded" src="assets/images/index/main.jpg" alt="">
+			<!-- Hero info -->
+<!-- 			<div class="mt-lg-n5 d-none d-sm-block">
+				<div class="col-4 position-absolute bottom-0 end-0 me-4 mb-3 mb-lg-0 me-lg-n5">
+					<div class="bg-body rounded shadow text-center px-3 py-4">
+					<i class="bi bi-mic fs-1 h6"></i>
+					<p class="mb-0">We air new episodes every Monday</p>
 					</div>
 				</div>
-				<!-- Chart END -->
-			</div>
-
-			<div class="col-md-6 col-xxl-4">
-				<!-- Ranking START -->
-				<div class="card border h-100">
-					<!-- Card header -->
-					<div class="card-header border-bottom d-flex justify-content-start align-items-center  p-3">
-						<h5 class="card-header-title mb-0">Ranking Melhores Alunos</h5>
-            <!-- Dropdown button -->
-						<!-- <div class="dropdown text-end">
-							<a href="#" class="btn border-0 p-0 mb-0" role="button" id="dropdownShare3" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="bi bi-three-dots fa-fw"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare3">
-								<li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
-							</ul>
-						</div> -->
-					</div>
-
-					<!-- Card body START -->
-					<div class="card-body p-3">
-						<div class="custom-scrollbar h-350">
-							<div class="row">
-								<!-- Notice board item -->
-								<div class="col-12">
-									<div class="d-flex justify-content-between position-relative">
-										<div class="d-sm-flex">
-											<div class="icon-lg bg-warning bg-opacity-15 text-warning rounded-2 flex-shrink-0">
-												<i class="fa-solid fa-user-graduate"></i>
-											</div>
-											<!-- Info -->
-											<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-												<h6 class="mb-0"><a href="#" class="stretched-link">Antônio Augusto</a></h6>
-												<p class="mb-0">Nota: 9.6</p>
-												<!-- <span class="small">5 min atrás</span> -->
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Divider -->
-								<hr class="my-3">
-
-								<!-- Notice board item -->
-								<div class="col-12">
-									<div class="d-flex justify-content-between position-relative">
-										<div class="d-sm-flex">
-											<div class="icon-lg bg-success bg-opacity-15 text-success rounded-2 flex-shrink-0">
-												<i class="fa-solid fa-user-graduate"></i>
-											</div>
-											<!-- Info -->
-											<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-												<h6 class="mb-0"><a href="#" class="stretched-link">Rubens Matias</a></h6>
-												<p class="mb-0">Nota: 9.2</p>
-												<!-- <span class="small">5 min atrás</span> -->
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Divider -->
-								<hr class="my-3">
-
-								<!-- Notice board item -->
-								<div class="col-12">
-									<div class="d-flex justify-content-between position-relative">
-										<div class="d-sm-flex">
-											<div class="icon-lg bg-info bg-opacity-15 text-info rounded-2 flex-shrink-0">
-												<i class="fa-solid fa-user-graduate"></i>
-											</div>
-											<!-- Info -->
-											<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-												<h6 class="mb-0"><a href="#" class="stretched-link">Flávia Fonseca</a></h6>
-												<p class="mb-0">Nota: 8.9</p>
-												<!-- <span class="small">5 min atrás</span> -->
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Divider -->
-								<hr class="my-3">
-
-								<!-- Notice board item -->
-								<div class="col-12">
-									<div class="d-flex justify-content-between position-relative">
-										<div class="d-sm-flex">
-											<div class="icon-lg bg-secondary bg-opacity-15 text-secondary rounded-2 flex-shrink-0">
-												<i class="fa-solid fa-user-graduate"></i>
-											</div>
-											<!-- Info -->
-											<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-												<h6 class="mb-0"><a href="#" class="stretched-link">José Maria</a></h6>
-												<p class="mb-0">Nota: 8.8</p>
-												<!-- <span class="small">5 min atrás</span> -->
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Divider -->
-								<hr class="my-3">
-
-								<!-- Notice board item -->
-								<div class="col-12">
-									<div class="d-flex justify-content-between position-relative">
-										<div class="d-sm-flex">
-											<div class="icon-lg bg-danger bg-opacity-15 text-danger rounded-2 flex-shrink-0">
-												<i class="fa-solid fa-user-graduate"></i>
-											</div>
-											<!-- Info -->
-											<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-												<h6 class="mb-0"><a href="#" class="stretched-link">Maria José</a></h6>
-												<p class="mb-0">Nota: 8.5</p>
-												<!-- <span class="small">5 min atrás</span> -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</div><!-- Row END -->
-						</div>
-					</div>
-					<!-- Card body END -->
-
-					<!-- Card footer -->
-					<div class="card-footer border-top text-center p-3">
-						<a href="#">Visualizar todos</a>
-					</div>
-
-				</div>
-				<!-- Ranking END -->
-			</div>
-
-			<div class="col-12 col-md-6">
-				<!-- Recent comment START -->
-				<div class="card border h-100">
-					<!-- Card header -->
-					<div class="card-header border-bottom p-3">
-						<h5 class="card-header-title mb-0">Feedbacks recentes</h5>
-					</div>
-
-					<!-- Card body START -->
-					<div class="card-body p-3">
-
-						<div class="row">
-							<!-- Comment item -->
-							<div class="col-12">
-								<div class="d-flex align-items-center position-relative">
-									<!-- Avatar -->
-									<div class="avatar avatar-lg flex-shrink-0">
-										<img class="avatar-img rounded-2" src="assets/images/avatar/06.jpg" alt="avatar">
-									</div>
-									<!-- Info -->
-									<div class="ms-3">
-										<p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#"> Supposing so be resolving breakfast am or perfectly.. </a></p>
-										<div class="d-flex justify-content-between">
-											<p class="small mb-0">by Joan</p>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Divider -->
-							<hr class="my-3">
-
-							<!-- Comment item -->
-							<div class="col-12">
-								<div class="d-flex align-items-center position-relative">
-									<!-- Avatar -->
-									<div class="avatar avatar-lg flex-shrink-0">
-										<img class="avatar-img rounded-2" src="assets/images/avatar/08.jpg" alt="avatar">
-									</div>
-									<!-- Info -->
-									<div class="ms-3">
-										<p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#"> We focus a great deal on the understanding of behavioral.. </a></p>
-										<div class="d-flex justify-content-between">
-											<p class="small mb-0">by Allen Smith</p>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Divider -->
-							<hr class="my-3">
-
-							<!-- Comment item -->
-							<div class="col-12">
-								<div class="d-flex align-items-center position-relative">
-									<!-- Avatar -->
-									<div class="avatar avatar-lg flex-shrink-0">
-										<img class="avatar-img rounded-2" src="assets/images/avatar/04.jpg" alt="avatar">
-									</div>
-									<!-- Info -->
-									<div class="ms-3">
-										<p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#"> Supposing so be resolving breakfast am or perfectly.. </a></p>
-										<div class="d-flex justify-content-between">
-											<p class="small mb-0">by Louis Ferguson</p>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Divider -->
-							<hr class="my-3">
-
-							<!-- Comment item -->
-							<div class="col-12">
-								<div class="d-flex align-items-center position-relative">
-									<!-- Avatar -->
-									<div class="avatar avatar-lg flex-shrink-0">
-										<img class="avatar-img rounded-2" src="assets/images/avatar/05.jpg" alt="avatar">
-									</div>
-									<!-- Info -->
-									<div class="ms-3">
-										<p class="mb-1"> <a class="h6 fw-normal stretched-link" href="#"> Supposing so be resolving breakfast am or perfectly.. </a></p>
-										<div class="d-flex justify-content-between">
-											<p class="small mb-0">by Joan Wallace</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Card body END -->
-				</div>
-				<!-- Recent comment END -->
-			</div>
-
-			<div class=" col-12 col-md-6">
-				<div class="card border h-100">
-
-					<!-- Card header -->
-					<div class="card-header border-bottom d-flex justify-content-between align-items-center p-3">
-						<h5 class="card-header-title mb-0"><Table>Assuntos da Prova</Table></h5>
-						<a href="#" class="btn btn-sm btn-link p-0 mb-0 text-reset">Todos</a>
-					</div>
-
-					<!-- Card body START -->
-					<div class="card-body p-4">
-						<!-- Chart -->
-						<div class=" mx-auto">
-							<div id="apexChartTrafficSources"></div>
-						</div>
-						<!-- Content -->
-						<ul class="list-inline text-center mt-3">
-							<li class="list-inline-item pe-2"><i class="text-primary bi bi-circle-fill pe-1"></i> Search </li>
-							<li class="list-inline-item pe-2"><i class="text-success bi bi-circle-fill pe-1"></i> Direct </li>
-							<li class="list-inline-item pe-2"><i class="text-danger bi bi-circle-fill pe-1"></i> Social </li>
-							<li class="list-inline-item pe-2"><i class="text-warning bi bi-circle-fill pe-1"></i> Display ads </li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12">
-				<!-- Blog list table START -->
-				<div class="card border bg-transparent rounded-3">
-					<!-- Card header START -->
-					<div class="card-header bg-transparent border-bottom p-3">
-						<div class="d-sm-flex justify-content-between align-items-center">
-							<h5 class="mb-2 mb-sm-0">Lista de alunos <span class="badge bg-primary bg-opacity-10 text-primary">50</span></h5>
-							<a href="#" class="btn btn-sm btn-primary mb-0">Add</a>
-						</div>
-					</div>
-					<!-- Card header END -->
-
-					<!-- Card body START -->
-					<div class="card-body">
-
-						<!-- Search and select START -->
-						<div class="row g-3 align-items-center justify-content-between mb-3">
-							<!-- Search -->
-							<div class="col-md-8">
-								<form class="rounded position-relative">
-									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar" aria-label="Procurar">
-									<button class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6"></i></button>
-								</form>
-							</div>
-
-							<!-- Select option -->
-							<div class="col-md-3">
-								<!-- Short by filter -->
-								<form>
-									<select class="form-select z-index-9 bg-transparent" aria-label=".form-select-sm">
-										<option value="">Classificar</option>
-<!-- 										<option>Free</option>
-										<option>Newest</option>
-										<option>Oldest</option> -->
-									</select>
-								</form>
-							</div>
-						</div>
-						<!-- Search and select END -->
-
-						<!-- Blog list table START -->
-						<div class="table-responsive border-0">
-							<table class="table align-middle p-4 mb-0 table-hover table-shrink">
-								<!-- Table head -->
-								<thead class="table-dark">
-									<tr>
-										<th scope="col" class="border-0 rounded-start">Nome</th>
-										<th scope="col" class="border-0">Matricula</th>
-										<th scope="col" class="border-0">Semestre</th>
-										<th scope="col" class="border-0">Curso</th>
-										<th scope="col" class="border-0">Status</th>
-										<th scope="col" class="border-0 rounded-end">Action</th>
-									</tr>
-								</thead>
-
-								<!-- Table body START -->
-								<tbody class="border-top-0">
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Ana Silva</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">001234</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge text-bg-warning mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Pedro Santos</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">005678</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge text-bg-info mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-warning bg-opacity-15 text-warning mb-2">Inativo</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Sofia Oliveira</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">009876</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge text-bg-danger mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">João Pereira</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">002345</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge text-bg-success mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Maria Costa</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">004567</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge bg-primary mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-danger bg-opacity-10 text-danger mb-2">Removido</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<!-- Table data -->
-										<td>
-											<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">André Rodrigues</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>
-											<h6 class="mb-0"><a href="#">008765</a></h6>
-										</td>
-										<!-- Table data -->
-										<td>8º Semestre</td>
-										<!-- Table data -->
-										<td>
-											<a href="#" class="badge text-bg-danger mb-2"><i class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-										</td>
-										<!-- Table data -->
-										<td>
-											<span class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-										</td>
-										<!-- Table data -->
-										<td>
-                      <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash"></i></a>
-                        <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      </div>
-										</td>
-									</tr>
-
-								</tbody>
-								<!-- Table body END -->
-							</table>
-						</div>
-						<!-- Blog list table END -->
-
-						<!-- Pagination START -->
-						<div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3">
-							<!-- Content -->
-							<p class="mb-sm-0 text-center text-sm-start">Mostrando 1 a 8 de 20 páginas</p>
-							<!-- Pagination -->
-							<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
-								<ul class="pagination pagination-sm pagination-bordered mb-0">
-									<li class="page-item disabled">
-										<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-									</li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item active"><a class="page-link" href="#">2</a></li>
-									<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
-									<li class="page-item"><a class="page-link" href="#">15</a></li>
-									<li class="page-item">
-										<a class="page-link" href="#">Próximo</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<!-- Pagination END -->
-					</div>
-				</div>
-				<!-- Blog list table END -->
-			</div>
+			</div> -->
 		</div>
-	</div>
-</section>
-<!-- =======================
-Main contain END -->
+		<div class="col-lg-5">
+			<!-- Hero title -->
+			<p><span class="badge bg-primary me-1">NOVO</span> Pontencialize seu progresso!</p>
+			<h1 class="display-3">Análise Acadêmica Inteligente</h1>
+			<p>Nosso software de análise de desempenho acadêmico oferece insights poderosos para aprimorar o período acadêmico. Identifique tendências, melhore o ensino e impulsione o sucesso dos alunos.</p>
+		</div>
+		</div>
+		</div>
+	</section>
+	<!-- =======================
+	Main hero END -->
 
 </main>
 <!-- **************** MAIN CONTENT END **************** -->
