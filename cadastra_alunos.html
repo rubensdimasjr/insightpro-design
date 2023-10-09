@@ -84,7 +84,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="assets/vendor/apexcharts/css/apexcharts.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
 
-
+	<link rel="stylesheet" type="text/css" href="assets/vendor/quill/css/quill.snow.css">
 
 	<!-- Theme CSS -->
 	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -117,12 +117,12 @@ Header START -->
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav navbar-nav-scroll mx-auto">
 
-						<li class="nav-item"><a class="nav-link active" href="#"><i
+						<li class="nav-item"><a class="nav-link" href="index.html"><i
 									class="bi bi-house-door me-1"></i>Início</a>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="provas.html"><i
 									class="bi bi-pencil me-1"></i>Provas</a></li>
-						<li class="nav-item"><a class="nav-link" href="alunos.html"><i
+						<li class="nav-item"><a class="nav-link active" href="alunos.html"><i
 									class="bi bi-people me-1"></i>Alunos</a></li>
 						<li class="nav-item"><a class="nav-link" href="gabaritos.html"><i
 									class="bi bi-file-earmark"></i>Gabaritos</a></li>
@@ -359,38 +359,85 @@ Header END -->
 
 	<!-- **************** MAIN CONTENT START **************** -->
 	<main>
-
-		<!-- Main hero START -->
-		<section>
+		<section class="py-4">
 			<div class="container">
-				<div class="row g-4 align-items-center justify-content-between pb-lg-5">
-					<div class="col-lg-6 mt-0 position-relative">
-						<!-- Hero image -->
-						<img class="rounded" src="assets/images/index/main.jpg" alt="">
-						<!-- Hero info -->
-						<!-- 			<div class="mt-lg-n5 d-none d-sm-block">
-				<div class="col-4 position-absolute bottom-0 end-0 me-4 mb-3 mb-lg-0 me-lg-n5">
-					<div class="bg-body rounded shadow text-center px-3 py-4">
-					<i class="bi bi-mic fs-1 h6"></i>
-					<p class="mb-0">We air new episodes every Monday</p>
+				<div class="row pb-4">
+					<div class="col-12">
+						<!-- Title -->
+						<h1 class="mb-0 h2">Cadastro do aluno</h1>
 					</div>
 				</div>
-			</div> -->
-					</div>
-					<div class="col-lg-5">
-						<!-- Hero title -->
-						<p><span class="badge bg-primary me-1">NOVO</span> Pontencialize seu progresso!</p>
-						<h1 class="display-3">Análise Acadêmica Inteligente</h1>
-						<p>Nosso software de análise de desempenho acadêmico oferece insights poderosos para aprimorar o
-							período
-							acadêmico. Identifique tendências, melhore o ensino e impulsione o sucesso dos alunos.</p>
+				<div class="row">
+					<div class="col-12">
+						<!-- Chart START -->
+						<div class="card border">
+							<!-- Card body -->
+							<div class="card-body">
+								<!-- Form START -->
+								<form>
+									<!-- Main form -->
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<!-- Aluno name -->
+											<div class="mb-3">
+												<label class="form-label">Nome do aluno</label>
+												<input required id="con-name" name="name" type="text"
+													class="form-control" placeholder="Digite o nome do aluno...">
+											</div>
+										</div>
+
+										<div class="col-12 col-md-6">
+											<!-- Matricula -->
+											<div class="mb-3">
+												<label class="form-label">Matricula</label>
+												<input required id="con-name" name="enrollment" type="text" class="form-control" placeholder="Digite a matricula do aluno...">
+											</div>
+										</div>
+
+										<div class="col-lg-6">
+											<!-- Course -->
+											<div class="mb-3">
+												<label class="form-label">Curso</label>
+												<select class="form-select" aria-label="Curso">
+													<option selected disabled>Selecione o curso...</option>
+													<option value="1">Technology</option>
+													<option value="2">Travel</option>
+													<option value="3">Business</option>
+													<option value="4">Sports</option>
+													<option value="5">Marketing</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-6">
+											<!-- Course -->
+											<div class="mb-3">
+												<label class="form-label">Semestre</label>
+												<select class="form-select" aria-label="Semestre">
+													<option selected disabled>Selecione o semestre...</option>
+													<option value="1">1° Semestre</option>
+													<option value="2">2° Semestre</option>
+													<option value="3">3° Semestre</option>
+													<option value="4">4° Semestre</option>
+													<option value="5">5° Semestre</option>
+												</select>
+											</div>
+										</div>
+
+										<!-- Create aluno button -->
+										<div class="col-md-12 text-start">
+											<button class="btn btn-primary w-100" type="submit">Cadastrar aluno</button>
+										</div>
+									</div>
+								</form>
+								<!-- Form END -->
+							</div>
+						</div>
+						<!-- Chart END -->
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- =======================
-	Main hero END -->
-
 	</main>
 	<!-- **************** MAIN CONTENT END **************** -->
 
@@ -402,10 +449,8 @@ Footer START -->
 				<div class="row align-items-center justify-content-between">
 					<div class="col-lg-6">
 
-						<div class="text-center text-lg-start">©2023 Desenvolvido por » 
-							<a href="https://github.com/rubensdimasjr" class="text-reset btn-link" target="_blank">Rubens Jr 
-							</a>
-							utilizando Webestica Design.
+						<div class="text-center text-lg-start">©2023 <a href="https://github.com/rubensdimasjr"
+								class="text-reset btn-link" target="_blank">Rubens Jr.</a>
 						</div>
 					</div>
 					<div class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end">
@@ -435,6 +480,8 @@ JS libraries, plugins and custom scripts -->
 	<!-- Vendors -->
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
+
+	<script src="assets/vendor/quill/js/quill.min.js"></script>
 
 	<!-- Template Functions -->
 	<script src="assets/js/functions.js"></script>
