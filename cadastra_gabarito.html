@@ -123,7 +123,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="provas.html">
+							<a class="nav-link" href="provas.html">
 								<i class="fa-regular fa-file"></i>
 								Provas
 							</a>
@@ -135,7 +135,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="gabarito.html">
+							<a class="nav-link active" href="gabarito.html">
 								<i class="fa-solid fa-table-list"></i>
 								Gabaritos
 							</a>
@@ -152,8 +152,7 @@ Header START -->
 					<div class="nav my-3 my-xl-0 px-4 px-lg-1 flex-nowrap align-items-center">
 						<div class="nav-item w-100">
 							<form class="position-relative">
-								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar"
-									aria-label="Procurar">
+								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar" aria-label="Procurar">
 								<button
 									class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
 									type="submit"><i class="fas fa-search fs-6 "></i></button>
@@ -365,7 +364,7 @@ Header END -->
 				<div class="row pb-4">
 					<div class="col-12">
 						<!-- Title -->
-						<h1 class="mb-0 h2">Cadastro de prova</h1>
+						<h1 class="mb-0 h2">Cadastro de gabarito</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -379,52 +378,114 @@ Header END -->
 									<!-- Main form -->
 									<div class="row">
 										<div class="col-12 col-md-6">
-											<!-- Nome da prova -->
+											<!-- Select prova -->
 											<div class="mb-3">
-												<label class="form-label">Nome da prova</label>
-												<input required id="con-name" name="name" type="text"
-													class="form-control" placeholder="Digite o nome da prova...">
+												<label class="form-label">Prova</label>
+												<select class="form-select" aria-label="Provas" name="id_exam">
+													<option selected disabled>Selecione uma prova...</option>
+													<option value="1">Prova de tecnologia</option>
+													<option value="2">Prova de tecnologia</option>
+													<option value="3">Prova de tecnologia</option>
+													<option value="4">Prova de tecnologia</option>
+													<option value="5">Prova de tecnologia</option>
+												</select>
 											</div>
 										</div>
-
 										<div class="col-12 col-md-6">
-											<!-- Post name -->
+											<!-- Select aluno -->
 											<div class="mb-3">
-												<label class="form-label">Instrutor</label>
-												<input required id="con-avaliator" name="instructor" type="text" class="form-control">
+												<label class="form-label">Aluno</label>
+												<select class="form-select" aria-label="Provas" name="id_aluno" disabled>
+													<option selected disabled>Selecione um aluno...</option>
+													<option value="1">Rubens Matias</option>
+													<option value="2">Rubens Matias</option>
+													<option value="3">Rubens Matias</option>
+													<option value="4">Rubens Matias</option>
+													<option value="5">Rubens Matias</option>
+												</select>
 											</div>
 										</div>
 
-										<div class="col-12 col-md-6">
-											<!-- Post name -->
-											<div class="mb-3">
-												<label class="form-label">Data</label>
-												<input required id="con-date" name="date" type="date" class="form-control">
-												<small class="text-muted">Data da prova</small>
+										<p>Questões objetivas</p>
+										<div class="col-12">
+											<div class="row mb-3">
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q1</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q2</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q3</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q4</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q5</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q6</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q7</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q8</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q9</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q10</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q11</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
+												<div class="col-3 col-md-2 col-lg-1 mb-2">
+													<label class="form-label">Q12</label>
+													<input type="text" name="q_obj[]" class="form-control">
+												</div>
 											</div>
 										</div>
 
-										<div class="col-12 col-md-6">
-											<!-- Post name -->
-											<div class="mb-3">
-												<label class="form-label">Local</label>
-												<input required id="con-local" name="local" type="text" class="form-control">
-												<small class="text-muted">Local da aplicação</small>
-											</div>
-										</div>
-
-										<!-- Short description -->
+										<!-- Discursivas -->
+										<p>Questões discursivas</p>
 										<div class="col-12">
 											<div class="mb-3">
-												<label class="form-label">Descrição</label>
-												<textarea class="form-control" rows="3" name="description" placeholder="Adicione a uma descrição sobre a prova..."></textarea>
+												<label class="form-label">Q13</label>
+												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="mb-3">
+												<label class="form-label">Q14</label>
+												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="mb-3">
+												<label class="form-label">Q15</label>
+												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
 											</div>
 										</div>
 
 										<!-- Create post button -->
-										<div class="col-md-12 text-start">
-											<button class="btn btn-primary w-100" type="submit">Cadastrar prova</button>
-										</div>
+<!-- 										<div class="col-md-12 text-start">
+											<button class="btn btn-primary w-100" type="submit">Cadastrar
+												questão</button>
+										</div> -->
 									</div>
 								</form>
 								<!-- Form END -->
@@ -440,26 +501,28 @@ Header END -->
 
 	<!-- =======================
 Footer START -->
-<footer class="mb-3">
-  <div class="container">
-    <div class="card card-body bg-light">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-lg-6">
+	<footer class="mb-3">
+		<div class="container">
+			<div class="card card-body bg-light">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6">
 
-          <div class="text-center text-lg-start">©2023 <a href="https://github.com/rubensdimasjr" class="text-reset btn-link" target="_blank">Rubens Jr.</a>
-          </div>
-        </div>
-        <div class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end">
-          <ul class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
-            <li class="nav-item"><a class="nav-link" href="#">Termos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Privacidade</a></li>
-            <li class="nav-item"><a class="nav-link pe-0" href="#">Cookies</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+						<div class="text-center text-lg-start">©2023 <a href="https://github.com/rubensdimasjr"
+								class="text-reset btn-link" target="_blank">Rubens Jr.</a>
+						</div>
+					</div>
+					<div class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end">
+						<ul
+							class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
+							<li class="nav-item"><a class="nav-link" href="#">Termos</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Privacidade</a></li>
+							<li class="nav-item"><a class="nav-link pe-0" href="#">Cookies</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<!-- =======================
 Footer END -->
 
