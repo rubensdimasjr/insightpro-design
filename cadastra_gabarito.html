@@ -152,7 +152,8 @@ Header START -->
 					<div class="nav my-3 my-xl-0 px-4 px-lg-1 flex-nowrap align-items-center">
 						<div class="nav-item w-100">
 							<form class="position-relative">
-								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar" aria-label="Procurar">
+								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar"
+									aria-label="Procurar">
 								<button
 									class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
 									type="submit"><i class="fas fa-search fs-6 "></i></button>
@@ -374,7 +375,7 @@ Header END -->
 							<!-- Card body -->
 							<div class="card-body">
 								<!-- Form START -->
-								<form>
+								<form method="post">
 									<!-- Main form -->
 									<div class="row">
 										<div class="col-12 col-md-6">
@@ -395,7 +396,8 @@ Header END -->
 											<!-- Select aluno -->
 											<div class="mb-3">
 												<label class="form-label">Aluno</label>
-												<select class="form-select" aria-label="Provas" name="id_aluno" disabled>
+												<select class="form-select" aria-label="Provas" name="id_aluno"
+													disabled>
 													<option selected disabled>Selecione um aluno...</option>
 													<option value="1">Rubens Matias</option>
 													<option value="2">Rubens Matias</option>
@@ -411,81 +413,356 @@ Header END -->
 											<div class="row mb-3">
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q1</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q2</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q3</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q4</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q5</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q6</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q7</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q8</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q9</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q10</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q11</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 												<div class="col-3 col-md-2 col-lg-1 mb-2">
 													<label class="form-label">Q12</label>
-													<input type="text" name="q_obj[]" class="form-control">
+													<input type="text" name="q_obj[]" class="form-control" required>
 												</div>
 											</div>
 										</div>
 
 										<!-- Discursivas -->
 										<p>Questões discursivas</p>
-										<div class="col-12">
-											<div class="mb-3">
-												<label class="form-label">Q13</label>
-												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
+										<div class="accordion mb-5" id="accordionQ13">
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button" type="button"
+														data-bs-toggle="collapse" data-bs-target="#accordionQD13"
+														aria-expanded="true" aria-controls="collapseOne">
+														Q13
+													</button>
+												</h2>
+												<div id="accordionQD13" class="accordion-collapse collapse show"
+													data-bs-parent="#accordionQ13">
+													<div class="accordion-body">
+														<div class="row">
+															<div class="col-12 col-md-6 table-responsive">
+																<h6 class="text-center">Conteúdo</h6>
+																<table class="table table-bordered">
+																	<thead>
+																		<tr>
+																			<th>#</th>
+																			<th class="text-center">Bom</th>
+																			<th class="text-center">Médio</th>
+																			<th class="text-center">Ruim</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Aspectos Ortográficos</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][ct][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][ct][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][ct][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Aspectos Textuais</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][ct][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][ct][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][ct][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Aspectos Morfossintáticos</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][ct][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][ct][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][ct][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<div class="col-12 col-md-6">
+																<h6 class="text-center">Língua Portuguesa</h6>
+																<table class="table table-bordered">
+																	<thead>
+																		<tr>
+																			<th>#</th>
+																			<th class="text-center">Bom</th>
+																			<th class="text-center">Médio</th>
+																			<th class="text-center">Ruim</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Aspectos Ortográficos</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][lp][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][lp][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][lp][asp_ort]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Aspectos Textuais</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][lp][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][lp][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][lp][asp_txt]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Aspectos Morfossintáticos</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="bom"
+																						name="discursivas[q13][lp][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="medio"
+																						name="discursivas[q13][lp][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																			<td>
+																				<div class="form-check d-flex justify-content-center">
+																					<input
+																						class="form-check-input"
+																						type="radio"
+																						value="ruim"
+																						name="discursivas[q13][lp][asp_mrf]"
+																						required
+																					>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="col-12">
-											<div class="mb-3">
-												<label class="form-label">Q14</label>
-												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button collapsed" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+														aria-expanded="false" aria-controls="collapseTwo">
+														Q14
+													</button>
+												</h2>
+												<div id="collapseTwo" class="accordion-collapse collapse"
+													data-bs-parent="#accordionExample">
+													<div class="accordion-body">
+														...
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="col-12">
-											<div class="mb-3">
-												<label class="form-label">Q15</label>
-												<textarea required class="form-control" rows="3" name="q_disc[]" placeholder="Adicione uma resposta..."></textarea>
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button collapsed" type="button"
+														data-bs-toggle="collapse" data-bs-target="#collapseThree"
+														aria-expanded="false" aria-controls="collapseThree">
+														Q15
+													</button>
+												</h2>
+												<div id="collapseThree" class="accordion-collapse collapse"
+													data-bs-parent="#accordionExample">
+													<div class="accordion-body">
+														...
+													</div>
+												</div>
 											</div>
 										</div>
 
 										<!-- Create post button -->
-<!-- 										<div class="col-md-12 text-start">
-											<button class="btn btn-primary w-100" type="submit">Cadastrar
-												questão</button>
-										</div> -->
+										<div class="col-md-12 text-start">
+											<button class="btn btn-primary w-100" type="submit">Cadastrar gabarito</button>
+										</div>
 									</div>
 								</form>
 								<!-- Form END -->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Acertos por Questão</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.27.0/dist/apexcharts.min.css">
+</head>
+
+<body>
+
+    <div id="chart"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.0/dist/apexcharts.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dados fictícios
+            const questoes = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5']; // Adicione as demais questões
+            const alunos_corretos = [45, 32, 38, 28, 42]; // Adicione as demais quantidades de alunos corretos
+            const total_alunos = [50, 50, 50, 50, 50]; // Adicione as demais quantidades totais de alunos
+
+            // Calcular índice de acertos com 2 casas decimais
+            const indices_acertos = alunos_corretos.map((corretos, i) => parseFloat(((corretos / total_alunos[i]) * 100).toFixed(2)));
+
+            // Configurar o gráfico
+            const options = {
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    stacked: true,
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                    },
+                },
+                series: [{
+                    name: 'Índice de Acertos',
+                    data: indices_acertos,
+                }],
+                xaxis: {
+                    categories: questoes,
+                    labels: {
+                        show: true,
+                    },
+                },
+                yaxis: {
+                    title: {
+                        text: 'Índice de Acertos (%)'
+                    },
+                    labels: {
+                        formatter: function (val) {
+                            return val.toFixed(2) + '%';
+                        }
+                    }
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val.toFixed(2) + '%';
+                        }
+                    }
+                },
+            };
+
+            // Inicializar o gráfico
+            const chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -71,36 +71,36 @@ Table Of Content
 
 // Get CSS var value
 var ThemeColor = function () {
-  return {
-    getCssVariableValue: function (e) {
-      var t = getComputedStyle(document.documentElement).getPropertyValue(e);
-      return t && t.length > 0 && (t = t.trim()), t;
-    }
-  };
+    return {
+        getCssVariableValue: function (e) {
+            var t = getComputedStyle(document.documentElement).getPropertyValue(e);
+            return t && t.length > 0 && (t = t.trim()), t;
+        }
+    };
 }();
 
 var e = {
     init: function () {
         e.preLoader(),
-        e.megaMenu(),
-        e.stickyHeader(),
-        e.tinySlider(),
-        e.parallaxBG(),
-        e.stickyBar(),
-        e.toolTipFunc(),
-        e.popOverFunc(),
-        e.backTotop(),
-        e.stickyPost(),
-        e.stickyFooter(),
-        e.lightBox(),
-        e.enableIsotope(),
-        e.zooming(),
-        e.lazyLoading(),
-        e.quill(),
-        e.videoPlyr()
+            e.megaMenu(),
+            e.stickyHeader(),
+            e.tinySlider(),
+            e.parallaxBG(),
+            e.stickyBar(),
+            e.toolTipFunc(),
+            e.popOverFunc(),
+            e.backTotop(),
+            e.stickyPost(),
+            e.stickyFooter(),
+            e.lightBox(),
+            e.enableIsotope(),
+            e.zooming(),
+            e.lazyLoading(),
+            e.quill(),
+            e.videoPlyr()
         e.overlayScrollbars(),
-        e.trafficsourcesChart(),
-        e.trafficstatsChart();
+            e.trafficsourcesChart(),
+            e.trafficstatsChart();
     },
     isVariableDefined: function (el) {
         return typeof !!el && (el) != 'undefined' && el != null;
@@ -207,7 +207,7 @@ var e = {
         }
     },
     toggleAllClass: function (selectors, className) {
-        if (e.isVariableDefined(selectors)  && (selectors instanceof HTMLElement)) {
+        if (e.isVariableDefined(selectors) && (selectors instanceof HTMLElement)) {
             document.querySelectorAll(selectors).forEach((element) => {
                 element.toggleClass(className);
             });
@@ -234,7 +234,7 @@ var e = {
             var preloader = e.select('.preloader');
             if (e.isVariableDefined(preloader)) {
                 preloader.className += ' animate__animated animate__fadeOut';
-                setTimeout(function(){
+                setTimeout(function () {
                     preloader.style.display = 'none';
                 }, 200);
             }
@@ -251,7 +251,7 @@ var e = {
             if (e.isVariableDefined(element.nextElementSibling) && !element.nextElementSibling.classList.contains("show")) {
                 const parents = e.getParents(element, '.dropdown-menu');
                 e.removeClass(parents.querySelector('.show'), "show");
-                if(e.isVariableDefined(parents.querySelector('.dropdown-opened'))){
+                if (e.isVariableDefined(parents.querySelector('.dropdown-opened'))) {
                     e.removeClass(parents.querySelector('.dropdown-opened'), "dropdown-opened");
                 }
 
@@ -298,98 +298,98 @@ var e = {
     tinySlider: function () {
         var $carousel = e.select('.tiny-slider-inner');
         if (e.isVariableDefined($carousel)) {
-          var tnsCarousel = e.selectAll('.tiny-slider-inner');
-          tnsCarousel.forEach(slider => {
-              var slider1 = slider;
-              var sliderMode = slider1.getAttribute('data-mode') ? slider1.getAttribute('data-mode') : 'carousel';
-              var sliderAxis = slider1.getAttribute('data-axis') ? slider1.getAttribute('data-axis') : 'horizontal';
-              var sliderSpace = slider1.getAttribute('data-gutter') ? slider1.getAttribute('data-gutter') : 30;
-              var sliderEdge = slider1.getAttribute('data-edge') ? slider1.getAttribute('data-edge') : 0;
+            var tnsCarousel = e.selectAll('.tiny-slider-inner');
+            tnsCarousel.forEach(slider => {
+                var slider1 = slider;
+                var sliderMode = slider1.getAttribute('data-mode') ? slider1.getAttribute('data-mode') : 'carousel';
+                var sliderAxis = slider1.getAttribute('data-axis') ? slider1.getAttribute('data-axis') : 'horizontal';
+                var sliderSpace = slider1.getAttribute('data-gutter') ? slider1.getAttribute('data-gutter') : 30;
+                var sliderEdge = slider1.getAttribute('data-edge') ? slider1.getAttribute('data-edge') : 0;
 
-              var sliderItems = slider1.getAttribute('data-items') ? slider1.getAttribute('data-items') : 4; //option: number (items in all device)
-              var sliderItemsXl = slider1.getAttribute('data-items-xl') ? slider1.getAttribute('data-items-xl') : Number(sliderItems); //option: number (items in 1200 to end )
-              var sliderItemsLg = slider1.getAttribute('data-items-lg') ? slider1.getAttribute('data-items-lg') : Number(sliderItemsXl); //option: number (items in 992 to 1199 )
-              var sliderItemsMd = slider1.getAttribute('data-items-md') ? slider1.getAttribute('data-items-md') : Number(sliderItemsLg); //option: number (items in 768 to 991 )
-              var sliderItemsSm = slider1.getAttribute('data-items-sm') ? slider1.getAttribute('data-items-sm') : Number(sliderItemsMd); //option: number (items in 576 to 767 )
-              var sliderItemsXs = slider1.getAttribute('data-items-xs') ? slider1.getAttribute('data-items-xs') : Number(sliderItemsSm); //option: number (items in start to 575 )
+                var sliderItems = slider1.getAttribute('data-items') ? slider1.getAttribute('data-items') : 4; //option: number (items in all device)
+                var sliderItemsXl = slider1.getAttribute('data-items-xl') ? slider1.getAttribute('data-items-xl') : Number(sliderItems); //option: number (items in 1200 to end )
+                var sliderItemsLg = slider1.getAttribute('data-items-lg') ? slider1.getAttribute('data-items-lg') : Number(sliderItemsXl); //option: number (items in 992 to 1199 )
+                var sliderItemsMd = slider1.getAttribute('data-items-md') ? slider1.getAttribute('data-items-md') : Number(sliderItemsLg); //option: number (items in 768 to 991 )
+                var sliderItemsSm = slider1.getAttribute('data-items-sm') ? slider1.getAttribute('data-items-sm') : Number(sliderItemsMd); //option: number (items in 576 to 767 )
+                var sliderItemsXs = slider1.getAttribute('data-items-xs') ? slider1.getAttribute('data-items-xs') : Number(sliderItemsSm); //option: number (items in start to 575 )
 
-              var sliderSpeed = slider1.getAttribute('data-speed') ? slider1.getAttribute('data-speed') : 500;
-              var sliderautoWidth = slider1.getAttribute('data-autowidth') === 'true'; //option: true or false
-              var sliderArrow = slider1.getAttribute('data-arrow') !== 'false'; //option: true or false
-              var sliderDots = slider1.getAttribute('data-dots') !== 'false'; //option: true or false
+                var sliderSpeed = slider1.getAttribute('data-speed') ? slider1.getAttribute('data-speed') : 500;
+                var sliderautoWidth = slider1.getAttribute('data-autowidth') === 'true'; //option: true or false
+                var sliderArrow = slider1.getAttribute('data-arrow') !== 'false'; //option: true or false
+                var sliderDots = slider1.getAttribute('data-dots') !== 'false'; //option: true or false
 
-              var sliderAutoPlay = slider1.getAttribute('data-autoplay') !== 'false'; //option: true or false
-              var sliderAutoPlayTime = slider1.getAttribute('data-autoplaytime') ? slider1.getAttribute('data-autoplaytime') : 4000;
-              var sliderHoverPause = slider1.getAttribute('data-hoverpause') === 'true'; //option: true or false
-              if (e.isVariableDefined(e.select('.custom-thumb'))) {
-                var sliderNavContainer = e.select('.custom-thumb');
-              } 
-              var sliderLoop = slider1.getAttribute('data-loop') !== 'false'; //option: true or false
-              var sliderRewind = slider1.getAttribute('data-rewind') === 'true'; //option: true or false
-              var sliderAutoHeight = slider1.getAttribute('data-autoheight') === 'true'; //option: true or false
-              var sliderfixedWidth = slider1.getAttribute('data-fixedwidth') === 'true'; //option: true or false
-              var sliderTouch = slider1.getAttribute('data-touch') !== 'false'; //option: true or false
-              var sliderDrag = slider1.getAttribute('data-drag') !== 'false'; //option: true or false
-              // Check if document DIR is RTL
-              var ifRtl = document.getElementsByTagName("html")[0].getAttribute("dir");
-              var sliderDirection;
-              if (ifRtl === 'rtl') {
-                  sliderDirection = 'rtl';
-              }
+                var sliderAutoPlay = slider1.getAttribute('data-autoplay') !== 'false'; //option: true or false
+                var sliderAutoPlayTime = slider1.getAttribute('data-autoplaytime') ? slider1.getAttribute('data-autoplaytime') : 4000;
+                var sliderHoverPause = slider1.getAttribute('data-hoverpause') === 'true'; //option: true or false
+                if (e.isVariableDefined(e.select('.custom-thumb'))) {
+                    var sliderNavContainer = e.select('.custom-thumb');
+                }
+                var sliderLoop = slider1.getAttribute('data-loop') !== 'false'; //option: true or false
+                var sliderRewind = slider1.getAttribute('data-rewind') === 'true'; //option: true or false
+                var sliderAutoHeight = slider1.getAttribute('data-autoheight') === 'true'; //option: true or false
+                var sliderfixedWidth = slider1.getAttribute('data-fixedwidth') === 'true'; //option: true or false
+                var sliderTouch = slider1.getAttribute('data-touch') !== 'false'; //option: true or false
+                var sliderDrag = slider1.getAttribute('data-drag') !== 'false'; //option: true or false
+                // Check if document DIR is RTL
+                var ifRtl = document.getElementsByTagName("html")[0].getAttribute("dir");
+                var sliderDirection;
+                if (ifRtl === 'rtl') {
+                    sliderDirection = 'rtl';
+                }
 
-              var tnsSlider = tns({
-                  container: slider,
-                  mode: sliderMode,
-                  axis: sliderAxis,
-                  gutter: sliderSpace,
-                  edgePadding: sliderEdge,
-                  speed: sliderSpeed,
-                  autoWidth: sliderautoWidth,
-                  controls: sliderArrow,
-                  nav: sliderDots,
-                  autoplay: sliderAutoPlay,
-                  autoplayTimeout: sliderAutoPlayTime,
-                  autoplayHoverPause: sliderHoverPause,
-                  autoplayButton: false,
-                  autoplayButtonOutput: false,
-                  controlsPosition: top,
-                  navContainer: sliderNavContainer,
-                  navPosition: top,
-                  autoplayPosition: top,
-                  controlsText: [
-                      '<i class="fas fa-chevron-left"></i>',
-                      '<i class="fas fa-chevron-right"></i>'
-                  ],
-                  loop: sliderLoop,
-                  rewind: sliderRewind,
-                  autoHeight: sliderAutoHeight,
-                  fixedWidth: sliderfixedWidth,
-                  touch: sliderTouch,
-                  mouseDrag: sliderDrag,
-                  arrowKeys: true,
-                  items: sliderItems,
-                  textDirection: sliderDirection,
-                  lazyload: true,
-                  lazyloadSelector: '.lazy',
-                  responsive: {
-                      0: {
-                          items: Number(sliderItemsXs)
-                      },
-                      576: {
-                          items: Number(sliderItemsSm)
-                      },
-                      768: {
-                          items: Number(sliderItemsMd)
-                      },
-                      992: {
-                          items: Number(sliderItemsLg)
-                      },
-                      1200: {
-                          items: Number(sliderItemsXl)
-                      }
-                  }
-              });
-          }); 
+                var tnsSlider = tns({
+                    container: slider,
+                    mode: sliderMode,
+                    axis: sliderAxis,
+                    gutter: sliderSpace,
+                    edgePadding: sliderEdge,
+                    speed: sliderSpeed,
+                    autoWidth: sliderautoWidth,
+                    controls: sliderArrow,
+                    nav: sliderDots,
+                    autoplay: sliderAutoPlay,
+                    autoplayTimeout: sliderAutoPlayTime,
+                    autoplayHoverPause: sliderHoverPause,
+                    autoplayButton: false,
+                    autoplayButtonOutput: false,
+                    controlsPosition: top,
+                    navContainer: sliderNavContainer,
+                    navPosition: top,
+                    autoplayPosition: top,
+                    controlsText: [
+                        '<i class="fas fa-chevron-left"></i>',
+                        '<i class="fas fa-chevron-right"></i>'
+                    ],
+                    loop: sliderLoop,
+                    rewind: sliderRewind,
+                    autoHeight: sliderAutoHeight,
+                    fixedWidth: sliderfixedWidth,
+                    touch: sliderTouch,
+                    mouseDrag: sliderDrag,
+                    arrowKeys: true,
+                    items: sliderItems,
+                    textDirection: sliderDirection,
+                    lazyload: true,
+                    lazyloadSelector: '.lazy',
+                    responsive: {
+                        0: {
+                            items: Number(sliderItemsXs)
+                        },
+                        576: {
+                            items: Number(sliderItemsSm)
+                        },
+                        768: {
+                            items: Number(sliderItemsMd)
+                        },
+                        992: {
+                            items: Number(sliderItemsLg)
+                        },
+                        1200: {
+                            items: Number(sliderItemsXl)
+                        }
+                    }
+                });
+            });
         }
     },
     // END: Tiny Slider
@@ -419,7 +419,7 @@ var e = {
     toolTipFunc: function () {
         var tooltipTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
+            return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     },
     // END: Tooltip
@@ -429,7 +429,7 @@ var e = {
     popOverFunc: function () {
         var popoverTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
+            return new bootstrap.Popover(popoverTriggerEl)
         })
     },
     // END: Popover
@@ -554,7 +554,7 @@ var e = {
                     menuItems.forEach(menuItem => {
                         menuItem.addEventListener('click', function (event) {
                             var filterValue = menuItem.getAttribute('data-filter');
-                            filter.arrange({filter: filterValue});
+                            filter.arrange({ filter: filterValue });
                             menuItems.forEach((control) => control.removeClass('active'));
                             menuItem.addClass('active');
                         });
@@ -572,22 +572,22 @@ var e = {
 
     // START: 14 Font size
     zooming: function () {
-      const doc = document.documentElement;
-      var radios = document.querySelectorAll('input[type=radio][name="fntradio"]');
-      radios.forEach(radio => {
-        radio.addEventListener("change", function() {
-            var idZ = radio.getAttribute('id');
-            if(idZ == 'font-sm') {
-              doc.classList.remove('font-lg');
-              doc.classList.add('font-sm');
-            } else if(idZ == 'font-default') {
-              doc.classList.remove('font-sm','font-lg');
-            } else if(idZ == 'font-lg') {
-              doc.classList.remove('font-sm');
-              doc.classList.add('font-lg');
-            }
+        const doc = document.documentElement;
+        var radios = document.querySelectorAll('input[type=radio][name="fntradio"]');
+        radios.forEach(radio => {
+            radio.addEventListener("change", function () {
+                var idZ = radio.getAttribute('id');
+                if (idZ == 'font-sm') {
+                    doc.classList.remove('font-lg');
+                    doc.classList.add('font-sm');
+                } else if (idZ == 'font-default') {
+                    doc.classList.remove('font-sm', 'font-lg');
+                } else if (idZ == 'font-lg') {
+                    doc.classList.remove('font-sm');
+                    doc.classList.add('font-lg');
+                }
+            });
         });
-      });
     },
     // END: Font size
 
@@ -603,177 +603,270 @@ var e = {
 
     // START: 16 Quill Editor
     quill: function () {
-      var ql = e.select('#quilleditor');
-      if (e.isVariableDefined(ql)) {
-        var editor = new Quill('#quilleditor', {
-          modules: { toolbar: '#quilltoolbar' },
-          theme: 'snow'
-        });
-      }
+        var ql = e.select('#quilleditor');
+        if (e.isVariableDefined(ql)) {
+            var editor = new Quill('#quilleditor', {
+                modules: { toolbar: '#quilltoolbar' },
+                theme: 'snow'
+            });
+        }
     },
     // END: Quill Editor
 
-  // START: 17 Video player
-  videoPlyr: function () {
-    var vdp = e.select('.player-wrapper');
-    if (e.isVariableDefined(vdp)) {
-      // youtube
-      const playerYoutube = Plyr.setup('.player-youtube', {});
-      window.player = playerYoutube;
+    // START: 17 Video player
+    videoPlyr: function () {
+        var vdp = e.select('.player-wrapper');
+        if (e.isVariableDefined(vdp)) {
+            // youtube
+            const playerYoutube = Plyr.setup('.player-youtube', {});
+            window.player = playerYoutube;
 
-      // Vimeo
-      const playerVimeo = Plyr.setup('.player-vimeo', {});
-      window.player = playerVimeo;
-      
-      // HTML video
-      const playerHtmlvideo = Plyr.setup('.player-html', {
-        captions: {active: true}
-      });
-      window.player = playerHtmlvideo;
+            // Vimeo
+            const playerVimeo = Plyr.setup('.player-vimeo', {});
+            window.player = playerVimeo;
 
-      // HTML audio
-      const playerHtmlaudio = Plyr.setup('.player-audio', {});
-      window.player = playerHtmlaudio;
-    }
-  },
-  // END: Video player
+            // HTML video
+            const playerHtmlvideo = Plyr.setup('.player-html', {
+                captions: { active: true }
+            });
+            window.player = playerHtmlvideo;
 
-  // START: 18 Overlay scrollbar
-  overlayScrollbars: function () {
-    var os = e.select('.custom-scrollbar');
-    if (os) {
-      document.addEventListener("DOMContentLoaded", function() {
-        var cs = document.querySelectorAll('.custom-scrollbar');
-        cs.forEach(c => {
-            OverlayScrollbars(c, {
-              scrollbars: {
-                autoHide: 'leave',
-                autoHideDelay: 200
-              },
-              overflowBehavior : {
-                  x : "visible-hidden",
-                  y : "scroll"
-              }
-             });
-        });
-      });
-    }
-  },
-  // END: Overlay scrollbar
-
-  // START: 19 Dashboard Chart
-  trafficsourcesChart: function () {
-    var ac = e.select('#apexChartTrafficSources');
-    if (e.isVariableDefined(ac)) {
-      var options = {
-        colors: [
-          '#2163e8', '#0cbc87', '#d6293e', '#f7c32e'
-        ],
-        labels: ['Search', 'Direct', 'Social', 'Display ads'],
-        series: [44, 55, 41, 17],
-        legend: {
-          show: false,
-          position: 'right'
-        },
-        chart: {
-          height: 300,
-          type: 'donut',
-        },
-        plotOptions: {
-          pie: {
-            donut: {
-              size: '75%',
-            },
-            offsetY: 20,
-          },
-          stroke: {
-            colors: undefined
-          }
-        },
-        stroke:{
-          show: false
-        },
-        dataLabels: {
-          enabled: false
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              height: 200
-            },
-            legend: {
-              show: false
-            }
-          }
-        }]
-      };
-    var chart = new ApexCharts(document.querySelector("#apexChartTrafficSources"), options);
-    chart.render();
-    }
-  },
-  // END: Dashboard Chart
-
-  // START: 20 Traffic Chart
-  trafficstatsChart: function () {
-    var cpv = e.select('#apexChartTrafficStats');
-    if (e.isVariableDefined(cpv)) {
-      var options = {
-        colors: [
-          '#2163e8',
-        ],
-        series: [{
-          name: 'Porcentagem',
-          data: [56,44,32,45,59,60,17,88,90,100,18,25,67,45,42,68,70,11,95,20,19,22,77,60,34,60,20,80,10,30,35,60,40,46,100]
-        }],
-        chart: {
-          height: 320,
-          type: 'area',
-          toolbar: {
-            show: false
-          }
-        },
-        grid: {
-          strokeDashArray: 4,
-          position: 'back'
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        legend: {
-          show: true,
-          horizontalAlign: 'right',
-          position: 'top',
-          labels: {
-          },
-          markers: {
-            width: 1,
-            height: 1
-          }
-        },
-        xaxis: {
-          labels: {
-            show: true
-          },
-          axisBorder: {
-            show: false
-          },
-          categories: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35],
-          title: {
-            text: 'Questões (1-35)'
-          }
-        },
-        yaxis: {
-            title: {
-                text: 'Porcentagem (%)'
-            }
+            // HTML audio
+            const playerHtmlaudio = Plyr.setup('.player-audio', {});
+            window.player = playerHtmlaudio;
         }
-      };
-      var chart = new ApexCharts(document.querySelector("#apexChartTrafficStats"), options);
-      chart.render();
-    }
-  },
-  // END: Traffic Chart   
+    },
+    // END: Video player
+
+    // START: 18 Overlay scrollbar
+    overlayScrollbars: function () {
+        var os = e.select('.custom-scrollbar');
+        if (os) {
+            document.addEventListener("DOMContentLoaded", function () {
+                var cs = document.querySelectorAll('.custom-scrollbar');
+                cs.forEach(c => {
+                    OverlayScrollbars(c, {
+                        scrollbars: {
+                            autoHide: 'leave',
+                            autoHideDelay: 200
+                        },
+                        overflowBehavior: {
+                            x: "visible-hidden",
+                            y: "scroll"
+                        }
+                    });
+                });
+            });
+        }
+    },
+    // END: Overlay scrollbar
+
+    // START: 19 Dashboard Chart
+    trafficsourcesChart: function () {
+        var ac = e.select('#apexChartTrafficSources');
+        if (e.isVariableDefined(ac)) {
+            var options = {
+                colors: [
+                    '#2163e8', '#0cbc87', '#d6293e', '#f7c32e'
+                ],
+                labels: ['Search', 'Direct', 'Social', 'Display ads'],
+                series: [44, 55, 41, 17],
+                legend: {
+                    show: false,
+                    position: 'right'
+                },
+                chart: {
+                    height: 300,
+                    type: 'donut',
+                },
+                plotOptions: {
+                    pie: {
+                        donut: {
+                            size: '75%',
+                        },
+                        offsetY: 20,
+                    },
+                    stroke: {
+                        colors: undefined
+                    }
+                },
+                stroke: {
+                    show: false
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            height: 200
+                        },
+                        legend: {
+                            show: false
+                        }
+                    }
+                }]
+            };
+            var chart = new ApexCharts(document.querySelector("#apexChartTrafficSources"), options);
+            chart.render();
+        }
+    },
+    // END: Dashboard Chart
+
+    // START: 20 Traffic Chart
+    trafficstatsChart: function () {
+        var cpv = e.select('#apexChartTrafficStats');
+        if (e.isVariableDefined(cpv)) {
+            // Dados
+            const notas = [87, 92, 78, 65, 91, 83, 72, 88, 95, 68, 76, 84, 79, 90, 86, 77, 81, 74, 89, 70];
+            const intervalos = [60, 70, 80, 90, 100];
+
+            // Função para contar as notas em cada intervalo
+            function contarNotasPorIntervalo(notas, intervalos) {
+                const counts = Array(intervalos.length).fill(0);
+
+                for (const nota of notas) {
+                    for (let i = 0; i < intervalos.length; i++) {
+                        if (nota < intervalos[i]) {
+                            counts[i]++;
+                            break;
+                        }
+                    }
+                }
+
+                return counts;
+            }
+
+            // Contar as notas em cada intervalo
+            const counts = contarNotasPorIntervalo(notas, intervalos);
+
+            // Configurar o gráfico
+            const options = {
+                chart: {
+                    type: 'bar',
+                    height: 350
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                series: [{
+                    name: 'Qtd alunos',
+                    data: counts
+                }],
+                xaxis: {
+                    categories: intervalos.map(intervalo => `Nota: ${intervalo - 10} - ${intervalo}`)
+                },
+                yaxis: {
+                    title: {
+                        text: 'Quantidade de Alunos'
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val;
+                        }
+                    }
+                }
+            };
+            var chart = new ApexCharts(document.querySelector("#apexChartTrafficStats"), options);
+            chart.render();
+        }
+    },
+    // END: Traffic Chart 
+    
+    // START: 20 Traffic Chart
+    trafficstatsChart: function () {
+        var cpv = e.select('#apexChartTrafficStats');
+        if (e.isVariableDefined(cpv)) {
+            // Dados
+            const notas = [87, 92, 78, 65, 91, 83, 72, 88, 95, 68, 76, 84, 79, 90, 86, 77, 81, 74, 89, 70];
+            const intervalos = [60, 70, 80, 90, 100];
+
+            // Função para contar as notas em cada intervalo
+            function contarNotasPorIntervalo(notas, intervalos) {
+                const counts = Array(intervalos.length).fill(0);
+
+                for (const nota of notas) {
+                    for (let i = 0; i < intervalos.length; i++) {
+                        if (nota < intervalos[i]) {
+                            counts[i]++;
+                            break;
+                        }
+                    }
+                }
+
+                return counts;
+            }
+
+            // Contar as notas em cada intervalo
+            const counts = contarNotasPorIntervalo(notas, intervalos);
+
+            // Configurar o gráfico
+            const options = {
+                chart: {
+                    type: 'bar',
+                    height: 350
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                series: [{
+                    name: 'Qtd alunos',
+                    data: counts
+                }],
+                xaxis: {
+                    categories: intervalos.map(intervalo => `Nota: ${intervalo - 10} - ${intervalo}`)
+                },
+                yaxis: {
+                    title: {
+                        text: 'Quantidade de Alunos'
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val;
+                        }
+                    }
+                }
+            };
+            var chart = new ApexCharts(document.querySelector("#apexChartTrafficStats"), options);
+            chart.render();
+        }
+    },
+    // END: Traffic Chart
 
 };
 e.init();
