@@ -84,6 +84,8 @@
 	<!-- <link rel="stylesheet" type="text/css" href="assets/vendor/apexcharts/css/apexcharts.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
 
+	<link rel="stylesheet" type="text/css" href="assets/vendor/quill/css/quill.snow.css">
+
 	<!-- Theme CSS -->
 	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -121,7 +123,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="provas.html">
+							<a class="nav-link active" href="provas.html">
 								<i class="fa-regular fa-file"></i>
 								Provas
 							</a>
@@ -139,7 +141,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#">
+							<a class="nav-link" href="alunos.html">
 								<i class="fa-solid fa-users"></i>
 								Alunos
 							</a>
@@ -150,7 +152,8 @@ Header START -->
 					<div class="nav my-3 my-xl-0 px-4 px-lg-1 flex-nowrap align-items-center">
 						<div class="nav-item w-100">
 							<form class="position-relative">
-								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar" aria-label="Procurar">
+								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar"
+									aria-label="Procurar">
 								<button
 									class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
 									type="submit"><i class="fas fa-search fs-6 "></i></button>
@@ -357,358 +360,106 @@ Header END -->
 
 	<!-- **************** MAIN CONTENT START **************** -->
 	<main>
-
-		<!-- =======================
-	Post list START -->
 		<section class="py-4">
 			<div class="container">
 				<div class="row pb-4">
 					<div class="col-12">
 						<!-- Title -->
-						<div class="d-sm-flex justify-content-sm-between align-items-center">
-							<h1 class="mb-2 mb-sm-0 h2">Alunos <span
-									class="badge bg-primary bg-opacity-10 text-primary">110</span>
-							</h1>
-							<a href="cadastra_alunos.html" class="btn btn-sm btn-primary mb-0"><i class="fas fa-plus me-2"></i>Cadastrar aluno</a>
-						</div>
+						<h1 class="mb-0 h2">Altera prova</h1>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<!-- Post list table START -->
-						<div class="card border bg-transparent rounded-3">
+						<!-- Chart START -->
+						<div class="card border">
+							<!-- Card body -->
+							<div class="card-body">
+								<!-- Form START -->
+								<form>
+									<!-- Main form -->
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<!-- Nome da prova -->
+											<div class="mb-3">
+												<label class="form-label">Nome da prova</label>
+												<input required id="con-name" name="name" type="text"
+													class="form-control" placeholder="Digite o nome da prova...">
+											</div>
+										</div>
 
-							<!-- Card body START -->
-							<div class="card-body p-3">
+										<div class="col-12 col-md-6">
+											<!-- Post name -->
+											<div class="mb-3">
+												<label class="form-label">Instrutor</label>
+												<input required id="con-avaliator" name="instructor" type="text" class="form-control">
+											</div>
+										</div>
 
-								<!-- Search and select START -->
-								<div class="row g-3 align-items-center justify-content-between mb-3">
-									<!-- Search -->
-									<div class="col-md-8">
-										<form class="rounded position-relative">
-											<input class="form-control pe-5 bg-transparent" type="search"
-												placeholder="Procurar" aria-label="Procurar">
-											<button
-												class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
-												type="submit"><i class="fas fa-search fs-6 "></i></button>
-										</form>
+										<div class="col-12 col-md-6">
+											<!-- Post name -->
+											<div class="mb-3">
+												<label class="form-label">Data</label>
+												<input required id="con-date" name="date" type="date" class="form-control">
+												<small class="text-muted">Data da prova</small>
+											</div>
+										</div>
+
+										<div class="col-12 col-md-6">
+											<!-- Post name -->
+											<div class="mb-3">
+												<label class="form-label">Local</label>
+												<input required id="con-local" name="local" type="text" class="form-control">
+												<small class="text-muted">Local da aplicação</small>
+											</div>
+										</div>
+
+										<!-- Short description -->
+										<div class="col-12">
+											<div class="mb-3">
+												<label class="form-label">Descrição</label>
+												<textarea class="form-control" rows="3" name="description" placeholder="Adicione a uma descrição sobre a prova..."></textarea>
+											</div>
+										</div>
+
+										<!-- Create post button -->
+										<div class="col-md-12 text-start">
+											<button class="btn btn-primary w-100" type="submit">Alterar prova</button>
+										</div>
 									</div>
-
-									<!-- Select option -->
-									<div class="col-md-3">
-										<!-- Short by filter -->
-										<form>
-											<select class="form-select z-index-9 bg-transparent"
-												aria-label=".form-select-sm">
-												<option selected disabled>Ordenar por</option>
-												<option>Nome</option>
-												<option>Matricula</option>
-												<option>Semestre</option>
-												<option>Curso</option>
-												<option>Status</option>
-											</select>
-										</form>
-									</div>
-								</div>
-								<!-- Search and select END -->
-
-								<!-- Post list table START -->
-								<div class="table-responsive border-0">
-									<table class="table align-middle p-4 mb-0 table-hover table-shrink">
-										<!-- Table head -->
-										<thead class="table-dark">
-											<tr>
-												<th scope="col" class="border-0 rounded-start">Nome</th>
-												<th scope="col" class="border-0">Matricula</th>
-												<th scope="col" class="border-0">Semestre</th>
-												<th scope="col" class="border-0">Curso</th>
-												<th scope="col" class="border-0">Status</th>
-												<th scope="col" class="border-0 rounded-end">Ação</th>
-											</tr>
-										</thead>
-
-										<!-- Table body START -->
-										<tbody class="border-top-0">
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Ana Silva</a>
-													</h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">001234</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge text-bg-warning mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Pedro
-															Santos</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">005678</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge text-bg-info mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-warning bg-opacity-15 text-warning mb-2">Inativo</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Sofia
-															Oliveira</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">009876</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge text-bg-danger mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">João
-															Pereira</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">002345</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge text-bg-success mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">Maria
-															Costa</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">004567</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge bg-primary mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-danger bg-opacity-10 text-danger mb-2">Removido</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-											<!-- Table item -->
-											<tr>
-												<!-- Table data -->
-												<td>
-													<h6 class="course-title mt-2 mt-md-0 mb-0"><a href="#">André
-															Rodrigues</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>
-													<h6 class="mb-0"><a href="#">008765</a></h6>
-												</td>
-												<!-- Table data -->
-												<td>8º Semestre</td>
-												<!-- Table data -->
-												<td>
-													<a href="#" class="badge text-bg-danger mb-2"><i
-															class="bi bi-circle-fill me-2 small fw-bold"></i>Pedagogia</a>
-												</td>
-												<!-- Table data -->
-												<td>
-													<span
-														class="badge bg-success bg-opacity-10 text-success mb-2">Ativo</span>
-												</td>
-												<!-- Table data -->
-												<td>
-													<div class="d-flex gap-2">
-														<a href="#" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Delete"><i class="bi bi-trash"></i></a>
-														<a href="edita_aluno.html" class="btn btn-light btn-round mb-0"
-															data-bs-toggle="tooltip" data-bs-placement="top"
-															title="Edit"><i class="bi bi-pencil-square"></i></a>
-													</div>
-												</td>
-											</tr>
-
-										</tbody>
-										<!-- Table body END -->
-									</table>
-								</div>
-								<!-- Post list table END -->
-
-								<!-- Pagination START -->
-								<div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3">
-									<!-- Content -->
-									<p class="mb-sm-0 text-center text-sm-start">Mostrando 1 a 8 de 20 resultados</p>
-									<!-- Pagination -->
-									<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
-										<ul class="pagination pagination-sm pagination-bordered mb-0">
-											<li class="page-item disabled">
-												<a class="page-link" href="#" tabindex="-1"
-													aria-disabled="true">Anterior</a>
-											</li>
-											<li class="page-item"><a class="page-link" href="#">1</a></li>
-											<li class="page-item active"><a class="page-link" href="#">2</a></li>
-											<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
-											<li class="page-item"><a class="page-link" href="#">15</a></li>
-											<li class="page-item">
-												<a class="page-link" href="#">Próximo</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-								<!-- Pagination END -->
+								</form>
+								<!-- Form END -->
 							</div>
 						</div>
-						<!-- Post list table END -->
+						<!-- Chart END -->
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- =======================
-	Main contain END -->
-
 	</main>
 	<!-- **************** MAIN CONTENT END **************** -->
 
 	<!-- =======================
 Footer START -->
-	<footer class="mb-3">
-		<div class="container">
-			<div class="card card-body bg-light">
-				<div class="row align-items-center justify-content-between">
-					<div class="col-lg-6">
-							<div class="text-center text-lg-start">©2023 Desenvolvido por » <a href="https://github.com/rubensdimasjr" class="text-reset btn-link" target="_blank">Rubens Jr </a>
-							utilizando Webestica Design.
-						</div>
-					</div>
-					<div class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end">
-						<ul
-							class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
-							<li class="nav-item"><a class="nav-link" href="#">Termos</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Privacidade</a></li>
-							<li class="nav-item"><a class="nav-link pe-0" href="#">Cookies</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+<footer class="mb-3">
+  <div class="container">
+    <div class="card card-body bg-light">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-6">
+
+          <div class="text-center text-lg-start">©2023 <a href="https://github.com/rubensdimasjr" class="text-reset btn-link" target="_blank">Rubens Jr.</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-sm-flex align-items-center justify-content-center justify-content-lg-end">
+          <ul class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
+            <li class="nav-item"><a class="nav-link" href="#">Termos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Privacidade</a></li>
+            <li class="nav-item"><a class="nav-link pe-0" href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 	<!-- =======================
 Footer END -->
 
@@ -724,6 +475,8 @@ JS libraries, plugins and custom scripts -->
 	<!-- Vendors -->
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
+
+	<script src="assets/vendor/quill/js/quill.min.js"></script>
 
 	<!-- Template Functions -->
 	<script src="assets/js/functions.js"></script>
