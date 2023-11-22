@@ -669,7 +669,7 @@ var e = {
                 colors: [
                     '#2163e8', '#0cbc87', '#d6293e', '#f7c32e'
                 ],
-                labels: ['Search', 'Direct', 'Social', 'Display ads'],
+                labels: ['Práticas Pedagógicas e Diversidade', 'Metodologias de Ensino', 'Psicologia Educacional', 'Teorias da Educação'],
                 series: [44, 55, 41, 17],
                 legend: {
                     show: false,

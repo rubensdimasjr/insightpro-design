@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Índice de Acertos por Questão</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.27.0/dist/apexcharts.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
 
     <div id="chart"></div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Acertos (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Q1</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Q1</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Q1</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.0/dist/apexcharts.min.js"></script>
     <script>
@@ -22,6 +46,8 @@
 
             // Calcular índice de acertos com 2 casas decimais
             const indices_acertos = alunos_corretos.map((corretos, i) => parseFloat(((corretos / total_alunos[i]) * 100).toFixed(2)));
+
+            console.log(indices_acertos);
 
             // Configurar o gráfico
             const options = {

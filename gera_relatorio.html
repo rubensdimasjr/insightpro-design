@@ -123,7 +123,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="provas.html">
+							<a class="nav-link active" href="provas.html">
 								<i class="fa-regular fa-file"></i>
 								Provas
 							</a>
@@ -141,7 +141,7 @@ Header START -->
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="alunos.html">
+							<a class="nav-link" href="alunos.html">
 								<i class="fa-solid fa-users"></i>
 								Alunos
 							</a>
@@ -152,8 +152,7 @@ Header START -->
 					<div class="nav my-3 my-xl-0 px-4 px-lg-1 flex-nowrap align-items-center">
 						<div class="nav-item w-100">
 							<form class="position-relative">
-								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar"
-									aria-label="Procurar">
+								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Procurar" aria-label="Procurar">
 								<button
 									class="btn bg-transparent border-0 px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
 									type="submit"><i class="fas fa-search fs-6 "></i></button>
@@ -365,7 +364,7 @@ Header END -->
 				<div class="row pb-4">
 					<div class="col-12">
 						<!-- Title -->
-						<h1 class="mb-0 h2">Cadastro do aluno</h1>
+						<h1 class="mb-0 h2">Gerar relatório</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -374,59 +373,40 @@ Header END -->
 						<div class="card border">
 							<!-- Card body -->
 							<div class="card-body">
+								<div class="row">
+									<div class="col">
+										<div class="alert alert-warning">
+											<strong>Atenção! </strong>
+											Para gerar um relatório será necessário realizar todo o procedimento de inserção de questões na respectiva prova, cadastrar todos os alunos e realizar todos os cadastros de gabaritos. Após todos esses passos, você pode gerar um novo relatório.
+										</div>
+									</div>
+								</div>
 								<!-- Form START -->
 								<form>
 									<!-- Main form -->
 									<div class="row">
 										<div class="col-12 col-md-6">
-											<!-- Aluno name -->
+											<!-- Select prova -->
 											<div class="mb-3">
-												<label class="form-label">Nome do aluno</label>
-												<input required id="con-name" name="name" type="text"
-													class="form-control" placeholder="Digite o nome do aluno...">
-											</div>
-										</div>
-
-										<div class="col-12 col-md-6">
-											<!-- Matricula -->
-											<div class="mb-3">
-												<label class="form-label">Matricula</label>
-												<input required id="con-name" name="enrollment" type="text" class="form-control" placeholder="Digite a matricula do aluno...">
-											</div>
-										</div>
-
-										<div class="col-lg-6">
-											<!-- Course -->
-											<div class="mb-3">
-												<label class="form-label">Curso</label>
-												<select class="form-select" aria-label="Curso">
-													<option selected disabled>Selecione o curso...</option>
-													<option value="1">Pedagogia</option>
+												<label class="form-label">Prova</label>
+												<select class="form-select" aria-label="Provas" name="id_exam">
+													<option selected disabled>Selecione uma prova...</option>
+													<option value="simuladoEnade20232">Simulado Enade #1 2023.2</option>
+													<option value="desafioIntelectual">Desafio Intelectual</option>
+													<option value="maratonaCognitiva">Maratona Cognitiva</option>
+													<option value="torneioConhecimento">Torneio do Conhecimento</option>
+													<option value="raliMental">Rali Mental</option>
+													<option value="olimpiadaMente">Olimpíada da Mente</option>
+													<option value="jornadaIntelectual">Jornada Intelectual</option>
+													<option value="desafioCerebral">Desafio Cerebral</option>
+													<option value="expedicaoSaber">Expedição do Saber</option>
 												</select>
 											</div>
 										</div>
 
-										<div class="col-lg-6">
-											<!-- Course -->
-											<div class="mb-3">
-												<label class="form-label">Semestre</label>
-												<select class="form-select" aria-label="Semestre">
-													<option selected disabled>Selecione o semestre...</option>
-													<option value="1">1° Semestre</option>
-													<option value="2">2° Semestre</option>
-													<option value="3">3° Semestre</option>
-													<option value="4">4° Semestre</option>
-													<option value="5">5° Semestre</option>
-													<option value="6">6° Semestre</option>
-													<option value="7">7° Semestre</option>
-													<option value="8">8° Semestre</option>
-												</select>
-											</div>
-										</div>
-
-										<!-- Create aluno button -->
+										<!-- Create post button -->
 										<div class="col-md-12 text-start">
-											<button class="btn btn-primary w-100" type="submit">Cadastrar aluno</button>
+											<button class="btn btn-primary w-100" type="submit">Gerar relatório</button>
 										</div>
 									</div>
 								</form>
